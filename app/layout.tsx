@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Edward Cupps — Product & UX Leadership Portfolio",
   description:
     "Senior product and UX leader building strong, disciplined teams that ship and learn quickly — at the intersection of design, product, and engineering in B2B SaaS.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
