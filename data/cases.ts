@@ -23,16 +23,16 @@ function imgPlaceholder(label: string, sub: string) {
 }
 
 export const CASES: Case[] = [
-  // ── CASE 1: HANA UI TRANSFORMATION ──
+  // ── CASE 1: PROJECT HANA ──
   {
     tag: "Platform Transformation · Mural",
-    title: "The Hana UI Transformation",
+    title: "Project Hana",
     subtitle:
-      "Leading the strategy, design, and rollout of a multi-year transformation of Mural's core canvas experience — without breaking the product customers already trusted.",
+      "Led the strategy and rollout of a multi-year transformation of Mural's core platform, guiding the Canvas design team in interpreting and applying the new UI.",
     meta: [
       { l: "Company", v: "Mural" },
       { l: "Timeline", v: "2022–2025" },
-      { l: "My Role", v: "Director → Sr. Director of Product Design" },
+      { l: "My Role", v: "Director of Product Design" },
       { l: "Scope", v: "Canvas · Design System · Cross-Platform" },
     ],
     slides: [
@@ -55,7 +55,7 @@ export const CASES: Case[] = [
         label: "The Risk",
         body: `<div class="slide-eyebrow">The Risk</div>
         <h2>A credible risk of delay, fragmentation, or partial rollout.</h2>
-        <p>A new UI system had been defined, but delivery expectations were already set, and the product organization had no shared plan for how to execute the transition.</p>
+        <p>A new UI system had been defined, but delivery expectations were already set, and the organization had no shared plan for how to execute the transition.</p>
         <ul>
           <li>Timeline commitments were already in place</li>
           <li>Legacy architecture limited modernization paths</li>
@@ -71,22 +71,23 @@ export const CASES: Case[] = [
         <h2>Complexity required structure before execution.</h2>
         <p>The redesign itself was not the challenge. The challenge was coordinating multiple teams, shared surfaces, and legacy constraints without breaking the product.</p>
         <ul>
-          <li>Organized Canvas teams around a shared Hana adoption plan</li>
-          <li>Established the Canvas UI group as cross-product system owner</li>
+          <li>Led Canvas teams around a shared Hana adoption plan</li>
+          <li>Established and led the Canvas UI group as cross-product system owner</li>
           <li>Defined boundaries between surfaces and shared components</li>
-          <li>Introduced a phased transformation model ("Look / Feel / Be")</li>
+          <li>Created and led a phased transformation model ("Look / Feel / Be")</li>
+          <li>Defined a simple but comprehensive scoring model to align teams on priorities and sequence modernization across the platform</li>
           <li>Aligned Design, Product, and Engineering on scope and sequencing</li>
-          <li>Brought the Design System team into the delivery plan</li>
-          <li>Created regular cross-team checkpoints to maintain alignment</li>
+          <li>Partnered with Engineering leadership to integrate the Design System into delivery</li>
+          <li>Established and ran cross-team checkpoints to maintain alignment</li>
         </ul>
         <p class="slide-callout">We built the structure for delivery first — then we modernized the UI.</p>
-        ${imgPlaceholder("Impact vs. development effort prioritization matrix", "Replace with: the \"Imagine you are renovating a hotel\" impact/effort matrix from the original deck")}`,
+        ${imgPlaceholder("Impact vs. development effort prioritization matrix", "Replace with: the scoring model or impact/effort matrix used to sequence modernization")}`,
       },
       {
         label: "The Framework",
         body: `<div class="slide-eyebrow">The Framework</div>
         <h2>From vision to shipment.</h2>
-        <p>To avoid a risky full rebuild, I introduced a phased model for modernizing the canvas experience.</p>
+        <p>To avoid a risky full rebuild, I introduced a phased transformation model that made modernization deliverable.</p>
         <div class="lfb-grid">
           <div class="lfb-card lfb-1"><div class="lfb-label">Look</div><div class="lfb-ver">v1</div><div class="lfb-desc">Visual alignment to the new design system</div></div>
           <div class="lfb-card lfb-2"><div class="lfb-label">Feel</div><div class="lfb-ver">v2</div><div class="lfb-desc">Interaction and usability improvements</div></div>
@@ -100,16 +101,18 @@ export const CASES: Case[] = [
           <li>Later expanded to include <strong>Exist</strong> for components carried forward unchanged</li>
         </ul>
         <p class="slide-callout">Modernization became intentional, not reactive.</p>
-        ${imgPlaceholder("Look / Feel / Be diagram — v1, v2, v3 cycle graphic", "Replace with: the three-ring cycle diagram from the original deck")}`,
+        ${imgPlaceholder("Look / Feel / Be diagram", "Replace with: the three-ring cycle diagram from the original deck")}`,
       },
       {
         label: "The Team Model",
         body: `<div class="slide-eyebrow">The Team Model</div>
         <h2>Structure to support platform change.</h2>
-        <p>To keep the Hana rollout coherent across multiple teams, I created a dedicated Canvas UI group to own shared UI and component strategy.</p>
+        <p>I introduced a Canvas UI group to establish clear ownership of shared UI across the product, in partnership with Product and Engineering.</p>
         <ul>
-          <li>Combined Canvas engineers and Design System engineers under a single model</li>
-          <li>Defined clear ownership for cross-app UI</li>
+          <li>Defined and established the Canvas UI group as the owner of cross-product UI</li>
+          <li>Partnered with Product leadership to align scope and priorities</li>
+          <li>Worked with Engineering leadership to ensure feasibility and execution</li>
+          <li>Combined Canvas and Design System engineers under a shared model</li>
           <li>Introduced proactive component planning</li>
           <li>Eliminated duplicate patterns and drift</li>
           <li>Implemented intake, review, and governance processes</li>
@@ -121,130 +124,64 @@ export const CASES: Case[] = [
         label: "Delivery Strategy",
         body: `<div class="slide-eyebrow">Delivery Strategy</div>
         <h2>Modernize without breaking the product.</h2>
-        <p>A full rebuild was too risky, so I defined the rollout strategy for Hana, working closely with Design Research and Foundations.</p>
+        <p>A full rebuild was too risky, so I co-defined the Hana rollout strategy with the Head of Research, partnering closely with Product and Design Foundations.</p>
         <ul>
-          <li>Friendly Private Beta with early customer partners</li>
-          <li>Closed Private Beta with enterprise customers</li>
-          <li>Public Beta in early Q1 2023</li>
-          <li>Full rollout before Q2</li>
+          <li>Delivered first customer beta within ~5 months of project start (April to September 2022)</li>
+          <li>Friendly and Closed Private Beta through mid-December 2022</li>
+          <li>Public Beta launched January 2023</li>
+          <li>Full rollout completed by mid-February 2023</li>
         </ul>
-        <p>This allowed us to learn and the experience to evolve while the platform remained stable.</p>
-        <p class="slide-callout">We modernized the product without destabilizing it.</p>`,
+        <p>This allowed the experience to evolve while the platform remained stable.</p>
+        <p class="slide-callout">The product evolved based on evidence, not assumption.</p>`,
       },
       {
-        label: "Validation Strategy",
-        body: `<div class="slide-eyebrow">Validation Strategy</div>
+        label: "Validation & Beta",
+        body: `<div class="slide-eyebrow">Validation &amp; Beta Program</div>
         <h2>Real users validated the direction.</h2>
-        <p>During the Private Beta, we gathered structured feedback from organizations using the new interface in real workflows.</p>
+        <p>Research led the beta program, while I partnered closely to translate insights into product decisions and rollout priorities.</p>
         <ul>
-          <li>This allowed the team to modernize the experience while the product continued to evolve.</li>
-          <li>Started with a Friendly Private Beta with early customer partners</li>
-          <li>Followed by a Closed Private Beta with selected enterprise customers</li>
-          <li>Q1 2023 — Public Beta release</li>
-          <li>Full product rollout followed by Q2</li>
+          <li>Interpreted research findings to define design and product actions</li>
+          <li>Participated in customer sessions and first-use observations</li>
+          <li>Synthesized feedback into prioritized improvements</li>
+          <li>Led internal dress rehearsals to identify usability and quality issues before release</li>
+          <li>Used feedback and usage patterns to guide rollout decisions</li>
         </ul>
-        <p class="slide-callout">We modernized the product without destabilizing it.</p>`,
+        <p class="slide-callout">The product evolved based on evidence, not assumption.</p>
+        ${imgPlaceholder("Beta program research artifacts", "Replace with: research synthesis, customer session notes, or feedback postcards from the beta")}`,
       },
       {
-        label: "Friendly Beta",
-        body: `<div class="slide-eyebrow">Friendly Private Beta</div>
-        <h2>Learning with trusted customers first.</h2>
-        <p>We released Hana to a small group of partner customers to test the new experience in real workflows.</p>
+        label: "Gradual Rollout",
+        body: `<div class="slide-eyebrow">Gradual Rollout</div>
+        <h2>Transformation happened without disruption.</h2>
+        <p>I defined and drove an incremental rollout strategy, enabling customers to adopt Hana safely while the platform continued to evolve.</p>
         <ul>
-          <li>Direct research sessions with customers</li>
-          <li>Observed collaboration, navigation, and editing patterns</li>
-          <li>Collected qualitative feedback and usability issues</li>
-          <li>Monitored performance and stability</li>
+          <li>Introduced opt-in beta for controlled adoption</li>
+          <li>Adjusted rollout timing based on customer feedback</li>
+          <li>Partnered with Product on enablement and communication</li>
+          <li>Expanded gradually across accounts</li>
+          <li>Completed rollout without disruption</li>
         </ul>
-        <p class="slide-callout">This phase exposed gaps we could fix before scaling.</p>
-        ${imgPlaceholder("Friendly Private Beta — research session or customer artifact", "Replace with: photos, notes, or synthesis from early partner research sessions")}`,
-      },
-      {
-        label: "Closed Beta",
-        body: `<div class="slide-eyebrow">Closed Private Beta</div>
-        <h2>Validating at enterprise scale.</h2>
-        <p>We expanded the beta to larger customers to confirm Hana worked in production environments.</p>
-        <ul>
-          <li>Larger murals and heavier usage</li>
-          <li>More collaborators per session</li>
-          <li>Complex permissions and integrations</li>
-          <li>Higher performance expectations</li>
-        </ul>
-        <p class="slide-callout">This phase confirmed the system could support real customer workloads.</p>`,
-      },
-      {
-        label: "Beta Signals",
-        body: `<div class="slide-eyebrow">Beta Signals</div>
-        <h2>Usage data showed the new experience was viable.</h2>
-        <p>During private beta we tracked adoption and activity across Hana surfaces.</p>
-        <ul>
-          <li>Growing number of beta users over the test period</li>
-          <li>Increasing session activity in Hana-enabled canvases</li>
-          <li>Positive usability feedback in research sessions</li>
-          <li>No blocking stability issues</li>
-        </ul>
-        <p class="slide-callout">These signals supported moving to Public Beta.</p>
-        ${imgPlaceholder("Beta adoption chart — user growth and session activity over test period", "Replace with: chart or graph showing beta user growth, session activity in Hana canvases")}`,
-      },
-      {
-        label: "Field Feedback",
-        body: `<div class="slide-eyebrow">Postcards / Field Feedback</div>
-        <h2>Customer feedback shaped rollout decisions.</h2>
-        <p>We collected feedback from beta customers through research sessions and field reports.</p>
-        <ul>
-          <li>Identified workflow gaps early</li>
-          <li>Found areas where legacy behavior was still required</li>
-          <li>Prioritized fixes based on real usage</li>
-          <li>Adjusted rollout pace based on customer readiness</li>
-        </ul>
-        <p class="slide-callout">Customer signal guided the release strategy.</p>
-        ${imgPlaceholder("Field feedback examples — postcards or customer research synthesis", "Replace with: feedback postcards, field report summaries, or customer quotes from beta")}`,
-      },
-      {
-        label: "Opt-In Rollout",
-        body: `<div class="slide-eyebrow">Opt-In / Gradual Rollout</div>
-        <h2>Customers moved at their own pace.</h2>
-        <p>Instead of forcing a switch, we allowed customers to opt into the new experience.</p>
-        <ul>
-          <li>Beta opt-in flow inside the product</li>
-          <li>Allowed teams to test safely</li>
-          <li>Reduced resistance to change</li>
-          <li>Provided real usage data before full switch</li>
-        </ul>
-        <p class="slide-callout">This made the transition safer for customers and for the business.</p>
-        ${imgPlaceholder("In-product opt-in flow for Hana beta", "Replace with: screenshot of the beta opt-in UI shown to customers inside the product")}`,
-      },
-      {
-        label: "Public Rollout",
-        body: `<div class="slide-eyebrow">Public Beta to Full Rollout</div>
-        <h2>Modernization without disruption.</h2>
-        <p>After private betas validated the experience, Hana was released publicly.</p>
-        <ul>
-          <li>Public Beta in Q1 2023</li>
-          <li>Gradual expansion across accounts</li>
-          <li>Continued monitoring of performance and feedback</li>
-          <li>Full rollout completed in Q2</li>
-        </ul>
-        <p class="slide-callout">The platform modernized without a breaking release.</p>
-        ${imgPlaceholder("Hana — before &amp; after UI comparison", "Replace with: side-by-side screenshots of pre-Hana and post-Hana canvas experience")}`,
+        <p class="slide-callout">The platform modernized without destabilizing the business.</p>
+        ${imgPlaceholder("Rollout timeline or adoption curve", "Replace with: chart showing opt-in growth, rollout milestones, or before/after UI comparison")}`,
       },
       {
         label: "Impact",
         body: `<div class="slide-eyebrow">Impact</div>
         <h2>Hana became the foundation of the modern product.</h2>
-        <p>After private betas validated the experience, Hana was released publicly.</p>
+        <p>A full platform transformation from concept to full rollout in under 10 months.</p>
         <ul>
-          <li>Unified UI across the canvas experience</li>
-          <li>Reduced fragmentation across teams</li>
-          <li>Enabled faster feature delivery</li>
-          <li>Created a scalable component model</li>
-          <li>Supported future collaboration and AI work</li>
+          <li>Established a unified UI across the canvas experience</li>
+          <li>Eliminated fragmentation across product teams</li>
+          <li>Enabled faster and more consistent feature delivery</li>
+          <li>Created a scalable foundation for the design system</li>
+          <li>Improved usability and discoverability across core workflows</li>
+          <li>Informed new product directions, including Focus Mode and enhanced facilitation tools</li>
         </ul>
-        <p class="slide-callout">The redesign succeeded because the system changed, not just the UI.</p>
+        <p class="slide-callout">This was not a redesign. It was a controlled transformation of the platform.</p>
         <div class="outcome-grid">
-          <div class="outcome-card"><div class="outcome-num">Q2 '23</div><div class="outcome-desc">Full platform rollout without a breaking release</div></div>
-          <div class="outcome-card"><div class="outcome-num">[ X ]</div><div class="outcome-desc">[ Add: adoption, NPS, or CSAT metric ]</div></div>
-          <div class="outcome-card"><div class="outcome-num">[ X ]</div><div class="outcome-desc">[ Add: engineering velocity or design system coverage ]</div></div>
+          <div class="outcome-card"><div class="outcome-num">120</div><div class="outcome-desc">Customers across 71 companies in the structured beta program</div></div>
+          <div class="outcome-card"><div class="outcome-num">74</div><div class="outcome-desc">Live research sessions across 53 days of beta usage</div></div>
+          <div class="outcome-card"><div class="outcome-num">878+</div><div class="outcome-desc">Feedback signals informing product decisions</div></div>
         </div>`,
       },
       {
@@ -255,7 +192,7 @@ export const CASES: Case[] = [
           <li>Framing before redesign</li>
           <li>Structure before UI</li>
           <li>Iteration instead of rebuild</li>
-          <li>Partnership across Design, Product, Engineering, Research</li>
+          <li>Partnership across Design, Product, Engineering, Research, and the whole org</li>
           <li>Data-driven rollout decisions</li>
         </ul>
         <p class="slide-callout">Large-scale change required system thinking.</p>`,

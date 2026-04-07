@@ -8,8 +8,8 @@ import FadeIn from './FadeIn'
 const cardMeta = [
   [
     { label: 'Company', value: 'Mural' },
-    { label: 'Timeline', value: '2023–2025' },
-    { label: 'My role', value: 'Sr. Director' },
+    { label: 'Timeline', value: '2022–2025' },
+    { label: 'My role', value: 'Director' },
   ],
   [
     { label: 'Company', value: 'Mural' },
@@ -29,7 +29,7 @@ const cardMeta = [
 ]
 
 const descriptions = [
-  "Realigning a company-wide design system and interaction model across a complex, live SaaS canvas product — without breaking what millions of users already trusted.",
+  "Led the strategy and rollout of a multi-year transformation of Mural's core platform, guiding the Canvas design team in interpreting and applying the new UI.",
   "Leading Mural's first enterprise AI initiative from zero to a high-profile launch at Microsoft Build 2023 — in under eight weeks, without a dedicated AI team.",
   "Defining UX strategy and co-leading product direction for Workiva's entry into a new regulatory reporting market — one that would account for 10% of company ARR.",
   "Reframing an agtech company's entire product identity — shifting from hardware-centric tools to a software-driven intelligence platform integrating AI, automation, and biosecurity.",
