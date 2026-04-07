@@ -8,7 +8,7 @@ import FadeIn from './FadeIn'
 const cardMeta = [
   [
     { label: 'Company', value: 'Mural' },
-    { label: 'Timeline', value: '2022–2025' },
+    { label: 'Timeline', value: '2022–2023' },
     { label: 'My role', value: 'Director' },
   ],
   [
