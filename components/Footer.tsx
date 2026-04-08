@@ -11,7 +11,7 @@ export default function Footer() {
         textTransform: 'uppercase',
       }}
     >
-      © 2025 &nbsp;<strong style={{ color: 'var(--ochre)', fontWeight: 400 }}>Edward Cupps</strong>&nbsp; · Product &amp; UX Leadership
+      © {new Date().getFullYear()} &nbsp;<strong style={{ color: 'var(--ochre)', fontWeight: 400 }}>Edward Cupps</strong>&nbsp; · Product &amp; UX Leadership
     </footer>
   )
 }
