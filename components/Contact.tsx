@@ -82,7 +82,7 @@ export default function Contact() {
         }}
       >
         <a
-          href="mailto:ed@edwardcupps.com"
+          href="mailto:ejcupps@gmail.com"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
