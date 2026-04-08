@@ -31,7 +31,7 @@ export const CASES: Case[] = [
       "Led the strategy and rollout of a multi-year transformation of Mural's core platform, guiding the Canvas design team in interpreting and applying the new UI.",
     meta: [
       { l: "Company", v: "Mural" },
-      { l: "Timeline", v: "2022–2025" },
+      { l: "Timeline", v: "2022–2023" },
       { l: "My Role", v: "Director of Product Design" },
       { l: "Scope", v: "Canvas · Design System · Cross-Platform" },
     ],
