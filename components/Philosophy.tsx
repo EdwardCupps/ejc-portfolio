@@ -4,19 +4,19 @@ const pillars = [
   {
     num: '01',
     title: 'Outcomes over outputs.',
-    body: "Features are hypotheses. I build teams that measure what changes in the world, not just what ships. Every roadmap starts with the metric we're moving — and why it matters to people.",
+    body: 'Features are hypotheses. We measure what changes for customers—not what ships. Roadmaps start with the outcome, the signal, and the bet we\u2019re making.',
     borderColor: 'var(--terra)',
   },
   {
     num: '02',
-    title: 'Discovery is not optional.',
-    body: "The best product organizations operate ahead of engineering — learning fast, failing cheap, and building conviction before committing. I've spent a career making dual-track discovery a cultural practice, not a process tax.",
+    title: 'Learn enough to move.',
+    body: 'Strong teams reduce risk early through discovery, prototyping, and direct customer insight. At ~70\u201380% confidence, we move, learn, and adjust.',
     borderColor: 'var(--ochre)',
   },
   {
     num: '03',
-    title: 'Great teams build great products.',
-    body: "The most important product I build is the team. Psychological safety, clear ownership, and real growth paths aren't perks — they're how disciplined, fast-moving organizations are made.",
+    title: 'Teams\u2014and craft\u2014win.',
+    body: 'The most important product is the team. Clear ownership and high standards matter\u2014and so does craft. I stay close to the work, raise the bar, and lead by example.',
     borderColor: 'var(--teal)',
   },
 ]
@@ -72,7 +72,7 @@ export default function Philosophy() {
           marginBottom: '4rem',
         }}
       >
-        Three principles I<br /><em style={{ fontStyle: 'italic' }}>won&rsquo;t negotiate on.</em>
+        Three principles I<br /><em style={{ fontStyle: 'italic' }}>lead with.</em>
       </h2>
 
       <div
