@@ -91,6 +91,7 @@ export default function About() {
             marginBottom: '3rem',
             paddingLeft: '1.75rem',
             borderLeft: '2px solid var(--terra)',
+            textIndent: '-0.45em',
           }}
         >
           &ldquo;When I&rsquo;m working on a problem, I never think about beauty. I think only how to solve the problem. But when I have finished, if the solution is not beautiful, I know it is wrong.&rdquo;
