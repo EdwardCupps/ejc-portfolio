@@ -171,12 +171,18 @@ body {
   animation: crossfade-label-after 6s ease-in-out infinite;
 }
 @keyframes crossfade {
-  0%, 40%  { opacity: 1; }
-  55%, 100% { opacity: 0; }
+  0%   { opacity: 1; }
+  35%  { opacity: 1; }
+  50%  { opacity: 0; }
+  85%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes crossfade-label-after {
-  0%, 40%  { opacity: 0; }
-  55%, 100% { opacity: 1; }
+  0%   { opacity: 0; }
+  35%  { opacity: 0; }
+  50%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /* Look / Feel / Be grid */
