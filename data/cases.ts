@@ -49,7 +49,7 @@ export const CASES: Case[] = [
           <li>No clear owner for cross-product UI consistency</li>
         </ul>
         <p class="slide-callout">There was strong aesthetic ambition. But no execution plan — and I had just joined the team.</p>
-        ${imgPlaceholder("Pre-Hana canvas UI state", "Replace with: screenshot of the legacy Mural canvas showing UI inconsistency across surfaces")}`,
+        <div class="img-placeholder"><img src="/images/hana-situation.jpg" alt="Pre-Hana Mural canvas UI" style="width:100%;display:block;" /></div>`,
       },
       {
         label: "The Risk",
