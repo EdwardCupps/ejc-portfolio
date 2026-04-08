@@ -7,11 +7,12 @@ const experience = [
   { company: 'Iowa State University', role: 'Asst. Professor of Practice · 2020–Present' },
 ]
 
-const stats = [
-  { num: '25+', label: 'Years in product & design' },
-  { num: '13', label: 'Years in B2B SaaS leadership' },
-  { num: '18', label: 'Designers grown & led' },
-  { num: '5', label: 'US patents (named inventor)' },
+const impact = [
+  'Led end-to-end redesign of Mural\u2019s platform (Hana), shipped to full customer base in under a year',
+  'Built and led design across multi-product SaaS platforms spanning collaboration, data, and reporting',
+  'Developed high-performing design teams, growing multiple designers into senior and leadership roles',
+  'Introduced AI-driven workflows into product development lifecycle',
+  'Named inventor on 5 patents in UX and product systems',
 ]
 
 export default function Hero() {
@@ -216,38 +217,43 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Stats grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            borderTop: '1px solid rgba(255,255,255,0.07)',
-          }}
-        >
-          {stats.map((stat, i) => (
+        {/* Selected Impact */}
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: '1.5rem' }}>
+          <div
+            style={{
+              fontSize: '0.65rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'var(--ochre)',
+              marginBottom: '1rem',
+            }}
+          >
+            Selected Impact
+          </div>
+          {impact.map((item, i) => (
             <FadeIn key={i}>
               <div
                 style={{
-                  padding: '1.5rem 1.5rem 1.5rem 0',
-                  borderRight: i % 2 === 0 ? '1px solid rgba(255,255,255,0.07)' : 'none',
-                  paddingLeft: i % 2 === 1 ? '1.5rem' : undefined,
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: '1rem',
+                  padding: '0.6rem 0',
                   borderBottom: '1px solid rgba(255,255,255,0.07)',
                 }}
               >
-                <div
+                <span
                   style={{
-                    fontFamily: 'var(--font-dm-serif, "DM Serif Display", serif)',
-                    fontSize: '2.25rem',
-                    color: 'var(--ochre-l)',
-                    lineHeight: 1,
-                    marginBottom: '0.3rem',
+                    width: '4px',
+                    height: '4px',
+                    background: 'var(--ochre)',
+                    transform: 'rotate(45deg)',
+                    marginTop: '0.5rem',
+                    flexShrink: 0,
                   }}
-                >
-                  {stat.num}
-                </div>
-                <div style={{ fontSize: '0.72rem', color: 'rgba(244,239,228,0.4)', letterSpacing: '0.06em' }}>
-                  {stat.label}
-                </div>
+                />
+                <span style={{ fontSize: '0.8rem', color: 'rgba(244,239,228,0.55)', lineHeight: 1.65 }}>
+                  {item}
+                </span>
               </div>
             </FadeIn>
           ))}
