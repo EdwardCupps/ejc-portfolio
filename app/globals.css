@@ -133,6 +133,7 @@ body {
 .img-ph-icon { color: var(--rule); margin-bottom: 0.25rem; }
 .img-ph-label { font-size: 0.85rem; font-weight: 500; color: var(--ink); }
 .img-ph-sub { font-size: 0.78rem; color: var(--muted); max-width: 52ch; line-height: 1.6; }
+.img-caption { font-size: 0.75rem; color: var(--muted); padding: 0.6rem 1rem; border-top: 1px solid var(--rule); }
 
 /* Look / Feel / Be grid */
 .lfb-grid {
