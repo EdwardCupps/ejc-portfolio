@@ -18,7 +18,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: "Edward Cupps — Product & UX Leadership Portfolio",
   description:
-    "Senior product and UX leader building strong, disciplined teams that ship and learn quickly — at the intersection of design, product, and engineering in B2B SaaS.",
+    "Senior product design leader building disciplined teams that ship and learn quickly: leading design across product and engineering to bring clarity, structure, and modern AI-driven workflows to B2B SaaS.",
   robots: {
     index: false,
     follow: false,
