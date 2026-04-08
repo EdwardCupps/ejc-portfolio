@@ -14,7 +14,7 @@ export default function Page() {
       <Hero />
       <OrnamentBand />
       <Philosophy />
-      <OrnamentBand startWithDiamond />
+      <OrnamentBand />
       <Work />
       <About />
       <Contact />
