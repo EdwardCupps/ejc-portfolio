@@ -104,7 +104,7 @@ export default function Work() {
               lineHeight: 1.85,
             }}
           >
-            Click any card to walk through the full case study. Add your artifacts, screens, and data as you go.
+            Click any card to walk through the full case study.
           </p>
         </div>
 
