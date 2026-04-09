@@ -56,7 +56,6 @@ export default function Work() {
         id="work"
         style={{
           background: 'var(--warm-wh)',
-          padding: 'clamp(4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 6rem)',
         }}
       >
         <div
@@ -64,11 +63,12 @@ export default function Work() {
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'space-between',
-            marginBottom: '4rem',
+            padding: 'clamp(4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 6rem) 4rem',
             flexWrap: 'wrap',
             gap: '1rem',
           }}
         >
+
           <div>
             <div
               style={{
@@ -125,12 +125,14 @@ export default function Work() {
                   padding: '3rem',
                   cursor: 'pointer',
                   width: '100%',
+                  height: '100%',
                   textAlign: 'left',
                   border: 'none',
                   position: 'relative',
                   overflow: 'hidden',
                   transition: 'background 0.2s',
-                  display: 'block',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget
@@ -215,7 +217,7 @@ export default function Work() {
                 </h3>
 
                 {/* Description */}
-                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, maxWidth: '36ch' }}>
+                <p style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.75, maxWidth: '36ch', flex: 1 }}>
                   {descriptions[i]}
                 </p>
 
