@@ -208,7 +208,7 @@ export default function Hero() {
                   >
                     {item.company}
                   </div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--muted)', marginTop: '0.15rem' }}>
+                  <div style={{ fontSize: '0.78rem', color: 'rgba(244,239,228,0.55)', marginTop: '0.15rem' }}>
                     {item.role}
                   </div>
                 </div>
