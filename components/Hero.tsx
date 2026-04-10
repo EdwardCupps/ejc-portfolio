@@ -63,7 +63,7 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          padding: 'clamp(3rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem) clamp(3rem, 5vw, 5rem) clamp(1.5rem, 6vw, 6rem)',
+          padding: 'clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 6rem)',
           borderRight: '1px solid rgba(255,255,255,0.06)',
           position: 'relative',
           zIndex: 1,
@@ -75,7 +75,7 @@ export default function Hero() {
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
             color: 'var(--ochre)',
-            marginBottom: '2rem',
+            marginBottom: '1.5rem',
             display: 'flex',
             alignItems: 'center',
             gap: '0.75rem',
@@ -110,7 +110,7 @@ export default function Hero() {
             color: 'rgba(244,239,228,0.6)',
             maxWidth: '40ch',
             lineHeight: 1.85,
-            marginBottom: '3rem',
+            marginBottom: '2.25rem',
           }}
         >
           Senior product design leader building disciplined teams that ship and learn quickly: leading design across product and engineering to bring clarity, structure, and modern AI-driven workflows to B2B SaaS.
@@ -144,13 +144,13 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          padding: 'clamp(3rem, 5vw, 5rem) clamp(1.5rem, 4vw, 4rem)',
+          padding: 'clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 4vw, 4rem)',
           position: 'relative',
           zIndex: 1,
         }}
       >
         {/* Starburst SVG */}
-        <div style={{ width: '100px', height: '100px', marginBottom: '3rem' }}>
+        <div style={{ width: '100px', height: '100px', marginBottom: '2rem' }}>
           <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
             <circle cx="50" cy="50" r="48" stroke="rgba(200,136,42,0.15)" strokeWidth="1"/>
             <circle cx="50" cy="50" r="34" stroke="rgba(200,136,42,0.2)" strokeWidth="1"/>
@@ -175,7 +175,7 @@ export default function Hero() {
         </div>
 
         {/* Experience list */}
-        <div style={{ marginBottom: '3.5rem' }}>
+        <div style={{ marginBottom: '2.5rem' }}>
           {experience.map((item, i) => (
             <FadeIn key={i}>
               <div
