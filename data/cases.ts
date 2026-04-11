@@ -49,7 +49,7 @@ export const CASES: Case[] = [
           <li>No clear owner for cross-product UI consistency</li>
         </ul>
         <p class="slide-callout">There was strong aesthetic ambition. But no execution plan — and I had just joined the team.</p>
-        <div class="img-crossfade"><img class="img-crossfade-after" src="/images/hana-after.png" alt="Mural canvas after Project Hana" /><img class="img-crossfade-before" src="/images/hana-situation.png" alt="Mural canvas before Project Hana" /><span class="img-crossfade-label">Before</span><span class="img-crossfade-label img-crossfade-label-after">After</span></div><div class="img-caption">Project Hana — Before &amp; After</div>`,
+        <div class="img-compare"><div class="img-compare-inner"><img class="img-compare-after" src="/images/hana-after.png" alt="Mural canvas after Project Hana" /><img class="img-compare-before" id="hana-compare-before" src="/images/hana-situation.png" alt="Mural canvas before Project Hana" style="clip-path:inset(0 0 0 50%)" /><div class="img-compare-handle" id="hana-compare-handle" style="left:50%"></div><span class="img-compare-label img-compare-label-l">Before</span><span class="img-compare-label img-compare-label-r">After</span><input type="range" min="0" max="100" value="50" class="img-compare-range" oninput="document.getElementById('hana-compare-before').style.clipPath='inset(0 0 0 '+this.value+'%)';document.getElementById('hana-compare-handle').style.left=this.value+'%'" /></div><div class="img-caption">Project Hana — Before &amp; After · Drag to compare</div></div>`,
       },
       {
         label: "The Risk",

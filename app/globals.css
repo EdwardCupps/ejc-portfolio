@@ -149,28 +149,69 @@ body {
 .img-ph-sub { font-size: 0.78rem; color: var(--muted); max-width: 52ch; line-height: 1.6; }
 .img-caption { font-size: 0.75rem; color: var(--muted); padding: 0.6rem 1rem; border-top: 1px solid var(--rule); }
 
-/* Before/After crossfade */
-.img-crossfade {
+/* Before/After compare slider */
+.img-compare { margin-top: 1.5rem; }
+.img-compare-inner {
   position: relative;
   overflow: hidden;
-  margin-top: 1.5rem;
+  user-select: none;
+  cursor: ew-resize;
 }
-.img-crossfade-after {
+.img-compare-after {
   display: block;
   width: 100%;
 }
-.img-crossfade-before {
+.img-compare-before {
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: crossfade 6s ease-in-out infinite;
 }
-.img-crossfade-label {
+.img-compare-handle {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #fff;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 5;
+}
+.img-compare-handle::after {
+  content: '◀ ▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+.img-compare-range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.img-compare-label {
   position: absolute;
   top: 0.75rem;
-  left: 0.75rem;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -179,25 +220,10 @@ body {
   color: var(--ochre-l);
   padding: 0.25rem 0.6rem;
   pointer-events: none;
+  z-index: 5;
 }
-.img-crossfade-label-after {
-  opacity: 0;
-  animation: crossfade-label-after 6s ease-in-out infinite;
-}
-@keyframes crossfade {
-  0%   { opacity: 1; }
-  35%  { opacity: 1; }
-  50%  { opacity: 0; }
-  85%  { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes crossfade-label-after {
-  0%   { opacity: 0; }
-  35%  { opacity: 0; }
-  50%  { opacity: 1; }
-  85%  { opacity: 1; }
-  100% { opacity: 0; }
-}
+.img-compare-label-l { left: 0.75rem; }
+.img-compare-label-r { right: 0.75rem; }
 
 /* Look / Feel / Be grid */
 .lfb-grid {
