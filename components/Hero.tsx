@@ -62,7 +62,7 @@ export default function Hero() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          justifyContent: 'flex-start',
           padding: 'clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 6vw, 6rem)',
           borderRight: '1px solid rgba(255,255,255,0.06)',
           position: 'relative',
@@ -143,8 +143,8 @@ export default function Hero() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          padding: 'clamp(2rem, 3.5vw, 3.5rem) clamp(1.5rem, 4vw, 4rem)',
+          justifyContent: 'flex-start',
+          padding: 'clamp(1rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 4rem) clamp(2rem, 3.5vw, 3.5rem)',
           position: 'relative',
           zIndex: 1,
         }}
@@ -183,7 +183,7 @@ export default function Hero() {
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: '1.25rem',
-                  padding: '1rem 0',
+                  padding: '0.65rem 0',
                   borderBottom: '1px solid rgba(255,255,255,0.07)',
                 }}
               >
