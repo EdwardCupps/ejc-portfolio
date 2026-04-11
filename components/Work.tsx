@@ -14,7 +14,7 @@ const cardMeta = [
   [
     { label: 'Company', value: 'Mural' },
     { label: 'Timeline', value: '2023' },
-    { label: 'My role', value: 'Sr. Director' },
+    { label: 'My role', value: 'Director' },
   ],
   [
     { label: 'Company', value: 'Workiva' },
