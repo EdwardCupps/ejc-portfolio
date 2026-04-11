@@ -141,8 +141,7 @@ export default function Work() {
                   if (corner) corner.style.borderTopColor = 'var(--sand)'
                   const num = el.querySelector('.case-num-el') as HTMLElement | null
                   if (num) num.style.color = 'var(--ochre)'
-                  const arrow = el.querySelector('.card-arrow-el') as HTMLElement | null
-                  if (arrow) arrow.style.transform = 'translate(5px, -5px)'
+
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget
@@ -151,8 +150,7 @@ export default function Work() {
                   if (corner) corner.style.borderTopColor = 'var(--cream)'
                   const num = el.querySelector('.case-num-el') as HTMLElement | null
                   if (num) num.style.color = 'var(--sand)'
-                  const arrow = el.querySelector('.card-arrow-el') as HTMLElement | null
-                  if (arrow) arrow.style.transform = 'none'
+
                 }}
               >
                 {/* Corner fold */}
@@ -226,28 +224,20 @@ export default function Work() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
+                    gap: '3rem',
                     marginTop: '2.5rem',
                     paddingTop: '1.5rem',
                     borderTop: '1px solid var(--rule)',
                   }}
                 >
-                  <div style={{ display: 'flex', gap: '2rem' }}>
-                    {cardMeta[i].map((m, j) => (
-                      <div key={j} style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>
-                        <strong style={{ display: 'block', color: 'var(--ink)', fontWeight: 500, fontSize: '0.8rem' }}>
-                          {m.value}
-                        </strong>
-                        {m.label}
-                      </div>
-                    ))}
-                  </div>
-                  <span
-                    className="card-arrow-el"
-                    style={{ fontSize: '1.25rem', color: 'var(--muted)', transition: 'transform 0.25s ease', display: 'block' }}
-                  >
-                    ↗
-                  </span>
+                  {cardMeta[i].map((m, j) => (
+                    <div key={j} style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>
+                      <strong style={{ display: 'block', color: 'var(--ink)', fontWeight: 500, fontSize: '0.8rem' }}>
+                        {m.value}
+                      </strong>
+                      {m.label}
+                    </div>
+                  ))}
                 </div>
               </button>
             </FadeIn>
