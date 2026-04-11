@@ -224,15 +224,15 @@ export default function Work() {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '3rem',
+                    justifyContent: 'space-between',
                     marginTop: '2.5rem',
                     paddingTop: '1.5rem',
                     borderTop: '1px solid var(--rule)',
                   }}
                 >
                   {cardMeta[i].map((m, j) => (
-                    <div key={j} style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>
-                      <strong style={{ display: 'block', color: 'var(--ink)', fontWeight: 500, fontSize: '0.8rem' }}>
+                    <div key={j} style={{ fontSize: '0.72rem', color: 'var(--muted)', whiteSpace: 'nowrap' }}>
+                      <strong style={{ display: 'block', color: 'var(--ink)', fontWeight: 500, fontSize: '0.8rem', whiteSpace: 'nowrap' }}>
                         {m.value}
                       </strong>
                       {m.label}
