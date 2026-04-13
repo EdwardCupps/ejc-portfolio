@@ -1,42 +1,49 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import { Principle } from '@/data/principles'
 
 interface PrincipleModalProps {
-  principle: Principle
+  principles: Principle[]
+  principleIdx: number
   slideIdx: number
   onClose: () => void
+  onPrincipleChange: (principleIdx: number, slideIdx: number) => void
   onSlideChange: (idx: number) => void
 }
 
-export default function PrincipleModal({ principle, slideIdx, onClose, onSlideChange }: PrincipleModalProps) {
-  const [jumpOpen, setJumpOpen] = useState(false)
-  const navRef = useRef<HTMLDivElement>(null)
+export default function PrincipleModal({ principles, principleIdx, slideIdx, onClose, onPrincipleChange, onSlideChange }: PrincipleModalProps) {
+  const principle = principles[principleIdx]
   const total = principle.slides.length
+  const isFirst = principleIdx === 0 && slideIdx === 0
+  const isLast = principleIdx === principles.length - 1 && slideIdx === total - 1
+
+  function goNext() {
+    if (slideIdx < total - 1) {
+      onSlideChange(slideIdx + 1)
+    } else if (principleIdx < principles.length - 1) {
+      onPrincipleChange(principleIdx + 1, 0)
+    }
+  }
+
+  function goPrev() {
+    if (slideIdx > 0) {
+      onSlideChange(slideIdx - 1)
+    } else if (principleIdx > 0) {
+      const prev = principles[principleIdx - 1]
+      onPrincipleChange(principleIdx - 1, prev.slides.length - 1)
+    }
+  }
 
   useEffect(() => {
     function handler(e: KeyboardEvent) {
-      if (e.key === 'Escape') {
-        if (jumpOpen) setJumpOpen(false)
-        else onClose()
-      }
-      if (e.key === 'ArrowRight') onSlideChange(Math.min(slideIdx + 1, total - 1))
-      if (e.key === 'ArrowLeft') onSlideChange(Math.max(slideIdx - 1, 0))
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowRight') goNext()
+      if (e.key === 'ArrowLeft') goPrev()
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [jumpOpen, slideIdx, total, onClose, onSlideChange])
-
-  useEffect(() => {
-    function handler(e: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setJumpOpen(false)
-      }
-    }
-    document.addEventListener('click', handler)
-    return () => document.removeEventListener('click', handler)
-  }, [])
+  }, [slideIdx, principleIdx, total])
 
   const pad = (n: number) => String(n).padStart(2, '0')
 
@@ -88,6 +95,32 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
           >
             ✕
           </button>
+
+          {/* Principle tabs */}
+          <div style={{ display: 'flex', background: 'var(--ink)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            {principles.map((p, i) => (
+              <button
+                key={i}
+                onClick={() => onPrincipleChange(i, 0)}
+                style={{
+                  flex: 1,
+                  padding: '0.9rem 1rem',
+                  background: 'none',
+                  border: 'none',
+                  borderBottom: `2px solid ${i === principleIdx ? p.accentColor : 'transparent'}`,
+                  cursor: 'pointer',
+                  fontSize: '0.65rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.15em',
+                  color: i === principleIdx ? 'var(--warm-wh)' : 'rgba(244,239,228,0.3)',
+                  textTransform: 'uppercase',
+                  transition: 'color 0.2s, border-color 0.2s',
+                }}
+              >
+                {p.num}
+              </button>
+            ))}
+          </div>
 
           {/* Header */}
           <div
@@ -148,22 +181,20 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
             </p>
           </div>
 
-          {/* Slides nav bar */}
+          {/* Slide nav bar */}
           <div
-            ref={navRef}
             style={{
               display: 'flex',
               alignItems: 'center',
               background: 'var(--cream)',
               borderBottom: '1px solid var(--rule)',
-              position: 'relative',
             }}
           >
             {/* Prev */}
             <button
-              onClick={() => onSlideChange(Math.max(slideIdx - 1, 0))}
-              disabled={slideIdx === 0}
-              aria-label="Previous slide"
+              onClick={goPrev}
+              disabled={isFirst}
+              aria-label="Previous"
               style={{
                 width: '3rem',
                 height: '3rem',
@@ -171,22 +202,21 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
                 border: 'none',
                 borderRight: '1px solid var(--rule)',
                 background: 'none',
-                cursor: slideIdx === 0 ? 'default' : 'pointer',
+                cursor: isFirst ? 'default' : 'pointer',
                 color: 'var(--muted)',
                 fontSize: '1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                opacity: slideIdx === 0 ? 0.25 : 1,
+                opacity: isFirst ? 0.25 : 1,
                 transition: 'all 0.18s',
               }}
             >
               ←
             </button>
 
-            {/* Title button (jump menu trigger) */}
-            <button
-              onClick={() => setJumpOpen(v => !v)}
+            {/* Slide indicator */}
+            <div
               style={{
                 flex: 1,
                 height: '3rem',
@@ -194,11 +224,7 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '1rem',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
                 padding: '0 1.5rem',
-                transition: 'background 0.18s',
               }}
             >
               <span
@@ -226,24 +252,13 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
               >
                 {principle.slides[slideIdx].label}
               </span>
-              <span
-                style={{
-                  fontSize: '0.6rem',
-                  color: 'var(--muted)',
-                  flexShrink: 0,
-                  transform: jumpOpen ? 'rotate(180deg)' : undefined,
-                  transition: 'transform 0.2s',
-                }}
-              >
-                ▼
-              </span>
-            </button>
+            </div>
 
             {/* Next */}
             <button
-              onClick={() => onSlideChange(Math.min(slideIdx + 1, total - 1))}
-              disabled={slideIdx === total - 1}
-              aria-label="Next slide"
+              onClick={goNext}
+              disabled={isLast}
+              aria-label="Next"
               style={{
                 width: '3rem',
                 height: '3rem',
@@ -251,78 +266,18 @@ export default function PrincipleModal({ principle, slideIdx, onClose, onSlideCh
                 border: 'none',
                 borderLeft: '1px solid var(--rule)',
                 background: 'none',
-                cursor: slideIdx === total - 1 ? 'default' : 'pointer',
+                cursor: isLast ? 'default' : 'pointer',
                 color: 'var(--muted)',
                 fontSize: '1rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                opacity: slideIdx === total - 1 ? 0.25 : 1,
+                opacity: isLast ? 0.25 : 1,
                 transition: 'all 0.18s',
               }}
             >
               →
             </button>
-
-            {/* Jump menu dropdown */}
-            {jumpOpen && (
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  right: 0,
-                  zIndex: 50,
-                  background: 'var(--warm-wh)',
-                  border: '1px solid var(--rule)',
-                  borderTop: 'none',
-                  boxShadow: '0 8px 24px rgba(26,20,16,0.12)',
-                  maxHeight: '320px',
-                  overflowY: 'auto',
-                }}
-              >
-                {principle.slides.map((s, i) => (
-                  <button
-                    key={i}
-                    onClick={() => { onSlideChange(i); setJumpOpen(false) }}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '1rem',
-                      padding: '0.75rem 1.5rem',
-                      cursor: 'pointer',
-                      width: '100%',
-                      textAlign: 'left',
-                      background: i === slideIdx ? 'var(--ink)' : 'none',
-                      border: 'none',
-                      borderBottom: i < principle.slides.length - 1 ? '1px solid var(--rule)' : 'none',
-                      transition: 'background 0.15s',
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: '0.62rem',
-                        fontWeight: 600,
-                        letterSpacing: '0.1em',
-                        color: i === slideIdx ? 'var(--ochre)' : 'var(--terra)',
-                        flexShrink: 0,
-                        width: '2rem',
-                      }}
-                    >
-                      {pad(i + 1)}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: '0.82rem',
-                        color: i === slideIdx ? 'var(--ochre-l)' : 'var(--muted)',
-                      }}
-                    >
-                      {s.label}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* Slide content */}

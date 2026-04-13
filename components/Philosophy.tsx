@@ -6,17 +6,19 @@ import { PRINCIPLES } from '@/data/principles'
 import PrincipleModal from './PrincipleModal'
 
 export default function Philosophy() {
-  const [openIdx, setOpenIdx] = useState<number | null>(null)
+  const [isOpen, setIsOpen] = useState(false)
+  const [principleIdx, setPrincipleIdx] = useState(0)
   const [slideIdx, setSlideIdx] = useState(0)
 
   function openModal(idx: number) {
-    setOpenIdx(idx)
+    setPrincipleIdx(idx)
     setSlideIdx(0)
+    setIsOpen(true)
     document.body.style.overflow = 'hidden'
   }
 
   function closeModal() {
-    setOpenIdx(null)
+    setIsOpen(false)
     document.body.style.overflow = ''
   }
 
@@ -146,11 +148,13 @@ export default function Philosophy() {
         </div>
       </section>
 
-      {openIdx !== null && (
+      {isOpen && (
         <PrincipleModal
-          principle={PRINCIPLES[openIdx]}
+          principles={PRINCIPLES}
+          principleIdx={principleIdx}
           slideIdx={slideIdx}
           onClose={closeModal}
+          onPrincipleChange={(pIdx, sIdx) => { setPrincipleIdx(pIdx); setSlideIdx(sIdx) }}
           onSlideChange={setSlideIdx}
         />
       )}
