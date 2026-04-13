@@ -14,110 +14,118 @@ export interface Principle {
 export const PRINCIPLES: Principle[] = [
   {
     num: '01',
-    title: 'Outcomes over outputs.',
-    tagline: 'Features are hypotheses. We measure what changes for customers — not what ships.',
+    title: 'Value over features.',
+    tagline: 'Most product organizations are optimized for output. Value is harder—and more important.',
     accentColor: 'var(--terra)',
     slides: [
       {
         label: 'The Principle',
         body: `<div class="slide-eyebrow">The Principle</div>
-        <h2>What you ship is a bet. The outcome is the score.</h2>
-        <p>Most product organizations are optimized for output — features shipped, velocity maintained, roadmap ticked. Output is visible, measurable, and easy to report. Outcomes are harder.</p>
-        <p>I've seen high-output teams ship constantly and move nothing that matters. The discipline I try to instill: start with the outcome you're trying to change, define the signal you'll use to know if you changed it, and only then ask what you'll build.</p>
-        <p class="slide-callout">A roadmap should be a set of bets, each with a clear hypothesis and a way to know if you won.</p>`,
-      },
-      {
-        label: 'In Practice',
-        body: `<div class="slide-eyebrow">In Practice</div>
-        <h2>What this looks like on a real team.</h2>
-        <p>[ Add: specific examples of how you've applied outcome-driven thinking — a roadmap framing exercise, a feature decision where you killed work because the outcome signal wasn't moving, or a planning ritual you introduced. ]</p>
+        <h2>Value over features.</h2>
+        <p>Most product organizations are optimized for output—features shipped, velocity maintained, roadmaps checked. Output is visible and easy to report. Value is harder.</p>
         <ul>
-          <li>Starting roadmap conversations with "What do we want customers to do differently?" — not "What should we build?"</li>
-          <li>Naming the metric before scoping the feature</li>
-          <li>Running mid-quarter reviews against outcomes, not velocity</li>
-          <li>Celebrating learning from a killed feature as much as a shipped one</li>
-        </ul>
-        <p class="slide-callout">The hardest part is not the framework. It's the cultural shift from output pride to outcome accountability.</p>`,
+          <li>Frame problems before solutions</li>
+          <li>Define success signals upfront</li>
+          <li>Treat roadmaps as bets</li>
+          <li>Prioritize learning over certainty</li>
+          <li>Cut work that isn&rsquo;t driving value</li>
+        </ul>`,
       },
       {
         label: 'A Story',
         body: `<div class="slide-eyebrow">A Story</div>
-        <h2>[ Replace with a specific story from your work. ]</h2>
-        <p>[ Describe a moment where outcome-over-output thinking changed a decision — or where the lack of it caused a problem you later fixed. ]</p>
-        <p>[ What was the feature? What was the original framing? What changed when you reframed it as an outcome? What happened? ]</p>`,
+        <h2>Fewer features. More impact.</h2>
+        <p>In multiple environments, I&rsquo;ve seen teams operating at high velocity but struggling to demonstrate impact. Roadmaps were full, delivery was consistent, but outcomes were unclear.</p>
+        <p>The shift wasn&rsquo;t adding more process—it was changing how work was framed. We moved from feature-driven planning to outcome-driven bets:</p>
+        <ul>
+          <li>Each initiative started with a defined problem and hypothesis</li>
+          <li>Success was tied to a measurable change in behavior or performance</li>
+          <li>Teams validated ideas early through interviews and prototypes before committing to build</li>
+        </ul>
+        <p>This led to fewer features being shipped—but more of them mattered. Conversations shifted from &ldquo;what are we building?&rdquo; to &ldquo;what are we trying to change?&rdquo; Engineers engaged earlier. Research became a shared responsibility, not a phase.</p>`,
+      },
+      {
+        label: 'Closing',
+        body: `<div class="slide-eyebrow">Closing</div>
+        <p class="slide-callout">If you can&rsquo;t define the change you&rsquo;re trying to create, you&rsquo;re not ready to build.</p>`,
       },
     ],
   },
   {
     num: '02',
     title: 'Learn enough to move.',
-    tagline: 'Strong teams reduce risk early through discovery, prototyping, and direct customer insight.',
+    tagline: 'We reduce risk early, then act before perfect certainty. Progress comes from learning fast.',
     accentColor: 'var(--ochre)',
     slides: [
       {
         label: 'The Principle',
         body: `<div class="slide-eyebrow">The Principle</div>
-        <h2>Perfect information is a trap. ~70–80% confidence is the signal to move.</h2>
-        <p>Teams that wait for certainty before acting don't ship — or they ship slowly enough that the opportunity has passed. Teams that move without any learning ship the wrong thing. The discipline is knowing when you've learned enough.</p>
-        <p>I use the 70–80% confidence threshold not as a formula but as a forcing function: have we reduced the biggest risks? Have we talked to customers? Have we prototyped the key assumption? If yes, move. If not, what's blocking the learning?</p>
-        <p class="slide-callout">Discovery is not a phase. It's a continuous practice running parallel to delivery.</p>`,
-      },
-      {
-        label: 'In Practice',
-        body: `<div class="slide-eyebrow">In Practice</div>
-        <h2>How I structure discovery on a team.</h2>
-        <p>[ Add: how you've operationalized dual-track discovery — the cadences, the artifacts, the rituals you put in place to make learning continuous rather than front-loaded. ]</p>
+        <h2>Learn enough to move.</h2>
+        <p>We reduce risk early, then act before perfect certainty. Progress comes from learning fast—not waiting to be right.</p>
         <ul>
-          <li>Weekly or bi-weekly discovery syncs separate from delivery standups</li>
-          <li>Prototype-first policy before spec-writing on novel features</li>
-          <li>Direct access to customers for PMs and designers — not filtered through research</li>
-          <li>Using confidence scoring to decide when to move from discovery to delivery</li>
-          <li>Post-launch learning reviews to close the loop</li>
-        </ul>
-        <p class="slide-callout">The best discovery doesn't feel like a phase — it feels like how the team works.</p>`,
+          <li>Aim for 70&ndash;80% confidence</li>
+          <li>Prototype before committing</li>
+          <li>Use direct customer insight</li>
+          <li>Timebox decisions</li>
+          <li>Separate reversible from irreversible decisions</li>
+        </ul>`,
       },
       {
         label: 'A Story',
         body: `<div class="slide-eyebrow">A Story</div>
-        <h2>[ Replace with a specific story from your work. ]</h2>
-        <p>[ Describe a moment where early learning changed the direction — or where a team moved too early (or waited too long) and what you changed as a result. ]</p>`,
+        <h2>Move at 70&ndash;80% confidence.</h2>
+        <p>In multiple teams, I&rsquo;ve seen work slow down not because of lack of effort—but because of the pursuit of certainty. Teams would continue researching, refining, and debating long after enough signal existed to move forward.</p>
+        <p>The shift was introducing a shared threshold: we move at 70&ndash;80% confidence. That changed behavior immediately:</p>
+        <ul>
+          <li>Teams relied more on prototypes and direct user feedback instead of internal discussion</li>
+          <li>Decisions were made earlier, with the understanding that iteration was part of the process</li>
+          <li>Work that might have taken weeks to &ldquo;finalize&rdquo; moved forward in days</li>
+        </ul>
+        <p>This didn&rsquo;t lower quality—it improved it. By getting work in front of users sooner, teams learned faster and corrected earlier.</p>`,
+      },
+      {
+        label: 'Closing',
+        body: `<div class="slide-eyebrow">Closing</div>
+        <p class="slide-callout">You don&rsquo;t need perfect information to move forward—you need enough to learn faster than the problem changes.</p>`,
       },
     ],
   },
   {
     num: '03',
-    title: 'Teams—and craft—win.',
-    tagline: 'The most important product is the team. Clear ownership, high standards, and leading by example.',
+    title: 'Teams\u2014and standards\u2014win.',
+    tagline: 'Strong teams outperform everything else. But only when there\'s clear ownership and a high bar.',
     accentColor: 'var(--teal)',
     slides: [
       {
         label: 'The Principle',
         body: `<div class="slide-eyebrow">The Principle</div>
-        <h2>A high-craft team compounds. A low-craft team erodes.</h2>
-        <p>I've led teams where the primary output was the team itself: designers who grew into leads, practices that outlasted my tenure, and a culture that attracted strong people because it was known for high standards.</p>
-        <p>Craft matters here in a specific way — not perfectionism, which kills velocity. Craft is the discipline to care about the details that customers feel even when they can't name them. It's the difference between a UI that works and a UI that earns trust.</p>
-        <p class="slide-callout">I stay close to the work, raise the bar, and lead by example — not just by direction.</p>`,
-      },
-      {
-        label: 'Building the Team',
-        body: `<div class="slide-eyebrow">Building the Team</div>
-        <h2>How I hire, develop, and structure design organizations.</h2>
-        <p>[ Add: your specific approach to hiring, onboarding, developing designers, giving feedback, and building the practices that make a team strong over time. ]</p>
+        <h2>Teams&mdash;and standards&mdash;win.</h2>
+        <p>Strong teams outperform everything else. But only when there&rsquo;s clear ownership, shared responsibility, and a high standard for the work.</p>
         <ul>
-          <li>Hiring for growth trajectory and intellectual curiosity, not just portfolio polish</li>
-          <li>Pairing designers with senior partners early in their tenure</li>
-          <li>Using critique as a teaching mechanism, not a review gate</li>
-          <li>Growing IC designers into leads through intentional stretch assignments</li>
-          <li>Building design practices that scale beyond any individual</li>
-        </ul>
-        <p class="slide-callout">The best thing I can do for a product org is leave it stronger than I found it.</p>`,
+          <li>Build shared ownership across disciplines</li>
+          <li>Bring engineers into the problem early</li>
+          <li>Stay close to the work</li>
+          <li>Set and reinforce a high bar</li>
+          <li>Use constraints to drive better decisions</li>
+        </ul>`,
       },
       {
-        label: 'Raising the Bar',
-        body: `<div class="slide-eyebrow">Raising the Bar</div>
-        <h2>[ Replace with a specific story about craft and standards. ]</h2>
-        <p>[ Describe a moment where you raised the bar on a team — a critique that changed the culture, a hire that elevated the group, a standard you introduced that stuck. ]</p>
-        <p>[ Or: a moment where you had to defend craft under pressure — timeline compression, stakeholder pushback, resource constraints — and how you navigated it. ]</p>`,
+        label: 'A Story',
+        body: `<div class="slide-eyebrow">A Story</div>
+        <h2>Build for shared ownership.</h2>
+        <p>In several environments, I&rsquo;ve seen teams structured for delivery but not for ownership. Design hands off to engineering, product manages the roadmap, and accountability gets fragmented. Things ship, but the experience lacks coherence.</p>
+        <p>The shift is building true shared ownership:</p>
+        <ul>
+          <li>Bringing engineering into early problem framing—not just implementation</li>
+          <li>Expecting designers to think in systems, not just screens</li>
+          <li>Creating space for real collaboration instead of sequential handoffs</li>
+        </ul>
+        <p>I stay close enough to the work to maintain standards—not to micromanage, but to ensure the bar is clear and consistently reinforced. When this works, decisions happen faster, solutions are more cohesive, and teams take pride in the outcome.</p>`,
+      },
+      {
+        label: 'Closing',
+        body: `<div class="slide-eyebrow">Closing</div>
+        <p class="slide-callout">The product reflects the team that built it&mdash;structure, ownership, and standards show up in the work.</p>`,
       },
     ],
   },
