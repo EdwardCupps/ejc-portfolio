@@ -65,17 +65,17 @@ export default function About() {
             marginBottom: '1.75rem',
           }}
         >
-          I believe the best design leaders build two things: great products and the teams that make them.
+          I transform complex, fragmented systems into coherent, scalable platforms.
         </h2>
 
         <p style={{ fontSize: '0.9rem', color: 'rgba(244,239,228,0.55)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-          I&rsquo;m a product and UX leader with 25+ years of experience — 13 of them in B2B SaaS — working at the intersection of design, strategy, and engineering. I&rsquo;ve led platform-level experience transformations, launched early AI initiatives, and built design organizations from the ground up at companies like Mural and Workiva.
+          I&rsquo;m a product and design leader with 25+ years of experience, focused on transforming complex, fragmented systems into coherent, scalable platforms. I work at the intersection of design, product, and engineering—leading platform-level experience transformations, modernizing information architecture, and helping teams move from feature delivery to measurable value.
         </p>
         <p style={{ fontSize: '0.9rem', color: 'rgba(244,239,228,0.55)', lineHeight: 1.9, marginBottom: '1.25rem' }}>
-          I&rsquo;m at my best in complex, ambiguous environments where the challenge isn&rsquo;t just making something usable — it&rsquo;s helping an organization modernize how it thinks about product, discovery, and delivery. I bring Lean UX principles, a bias toward measurable outcomes, and a track record of growing designers into leaders.
+          I&rsquo;m at my best in environments where the challenge isn&rsquo;t just usability, but clarity—where products have grown organically and need to be reshaped into something intentional. I bring Lean UX principles, a bias toward measurable outcomes, and a track record of growing designers into leaders who can operate at that same level.
         </p>
         <p style={{ fontSize: '0.9rem', color: 'rgba(244,239,228,0.55)', lineHeight: 1.9 }}>
-          Outside the day job: I teach graduate UX methodology at Iowa State University, hold 5 US patents, co-founded a design community of 800+, and speak regularly at conferences on design leadership and product practice.
+          Outside of product work, I teach graduate UX methodology at Iowa State University, hold five patents, and have built and led design communities and teams from the ground up.
         </p>
       </div>
 
