@@ -36,6 +36,7 @@ export default function Nav() {
           }}
         />
         <a href="#work" className="nav-link">Work</a>
+        <a href="#lead" className="nav-link">Lead</a>
         <a href="#about" className="nav-link">About</a>
         <a href="#contact" className="nav-link">Contact</a>
       </div>

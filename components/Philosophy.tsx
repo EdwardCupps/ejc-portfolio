@@ -23,6 +23,7 @@ export default function Philosophy() {
   return (
     <>
       <section
+        id="lead"
         style={{
           background: 'var(--cream)',
           padding: 'clamp(4rem, 7vw, 7rem) clamp(1.5rem, 6vw, 6rem)',
