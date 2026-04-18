@@ -225,6 +225,21 @@ body {
 .img-compare-label-l { left: 0.75rem; }
 .img-compare-label-r { right: 0.75rem; }
 
+@keyframes hana-clip-pan {
+  from { clip-path: inset(0 0 0 20%); }
+  to   { clip-path: inset(0 0 0 80%); }
+}
+@keyframes hana-handle-pan {
+  from { left: 20%; }
+  to   { left: 80%; }
+}
+#hana-compare-before {
+  animation: hana-clip-pan 7s ease-in-out 0.8s forwards;
+}
+#hana-compare-handle {
+  animation: hana-handle-pan 7s ease-in-out 0.8s forwards;
+}
+
 /* Look / Feel / Be grid */
 .lfb-grid {
   display: grid;
