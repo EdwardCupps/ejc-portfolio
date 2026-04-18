@@ -68,6 +68,8 @@ export default function CaseStudyModal({ caseData, slideIdx, onClose, onSlideCha
             width: '100%',
             position: 'relative',
             animation: 'slideUp 0.3s ease',
+            borderRadius: '1.25rem',
+            overflow: 'hidden',
           }}
         >
           {/* Close button */}
