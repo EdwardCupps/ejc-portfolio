@@ -58,7 +58,7 @@ export default function PrincipleModal({ principles, principleIdx, slideIdx, onC
           zIndex: 200,
           background: 'rgba(26,20,16,0.8)',
           overflowY: 'auto',
-          padding: '3rem 1.5rem',
+          padding: 'calc(3rem + 20px) 1.5rem 3rem',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'flex-start',
@@ -129,7 +129,7 @@ export default function PrincipleModal({ principles, principleIdx, slideIdx, onC
             style={{
               background: 'var(--ink)',
               color: 'var(--warm-wh)',
-              padding: 'clamp(2rem, 3.5vw, 3.5rem) clamp(1.75rem, 4vw, 4rem) clamp(1.5rem, 3vw, 3rem)',
+              padding: 'clamp(1.6rem, 2.8vw, 2.8rem) clamp(1.4rem, 3.2vw, 3.2rem) clamp(1.2rem, 2.4vw, 2.4rem)',
               position: 'relative',
               overflow: 'hidden',
               borderTop: `3px solid ${principle.accentColor}`,
